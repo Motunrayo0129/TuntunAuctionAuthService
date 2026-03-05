@@ -4,7 +4,9 @@ import com.TuntunAuction.auth_service.data.models.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.Data;
 
+@Data
 public class RegisterRequest {
 
     @NotBlank(message = "Fullname cannot be blank")
