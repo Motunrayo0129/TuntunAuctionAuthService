@@ -1,7 +1,7 @@
 package com.TuntunAuction.auth_service.exceptions;
 
-public class UnauthorizedExceptions extends RuntimeException {
-    public UnauthorizedExceptions(String message) {
+public class UnauthorizedException extends RuntimeException {
+    public UnauthorizedException(String message) {
         super(message);
     }
 }
