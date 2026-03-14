@@ -1,4 +1,22 @@
 package com.TuntunAuction.auth_service.dtos.requests;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.Data;
+
+@Data
 public class LoginRequest {
+
+
+    @NotBlank(message = "Email cannot be blank")
+    @Email(message = "Invalid email format")
+    private String email;
+
+    @Pattern(
+            regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&$#])[A-Za-z\\d@$!%*?&$#]{12,}$",
+            message = "Password must be at least 12 characters with uppercase, lowercase, number and special character"
+    )
+    private String password;
+
 }
